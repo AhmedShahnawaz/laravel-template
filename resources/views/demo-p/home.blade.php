@@ -1,29 +1,31 @@
-@extends('layout.app')
+@extends('demo-layout.app')
 
 @section('banner')
-        <!-- banner area start -->
-        <section id="banner-area">
-            <!-- Owl-carousel -->
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <img src="{{asset('img/banner/Banner-h-1.jpg')}}" alt="Banner1" class="img-fluid">
-                </div>
-                <div class="item">
-                    <img src="{{asset('img/banner/Banner-h-2.jpg')}}" alt="Banner2" class="img-fluid">
-                </div>
-                <div class="item">
-                    <img src="{{asset('img/banner/Banner-h-3.jpg')}}" alt="Banner3" class="img-fluid">
-                </div>
+
+    <!-- banner area start -->
+    <section id="banner-area">
+        <!-- Owl-carousel -->
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="{{asset('img\banner\banner-h-1.jpg')}}" alt="Banner1" class="img-fluid">
             </div>
-            <!--  Owl-carousel -->
-        </section>
-        <!-- banner area end -->
+            <div class="item">
+                <img src="{{asset('img\banner\banner-h-2.jpg')}}" alt="Banner2" class="img-fluid">
+            </div>
+            <div class="item">
+                <img src="{{asset('img\banner\banner-h-3.jpg')}}" alt="Banner3" class="img-fluid">
+            </div>
+        </div>
+        <!-- Owl-carousel -->
+    </section>
+    <!-- banner area end -->
+
 @endsection
 
-
 @section('content')
+    <!-- main content area start -->
+    <main id="main-area">
 
-<main id="main-area">
         <!-- top section card area  -->
         <section id="home-card-area">
             <div class="container py-md-5 pb-md-5">
@@ -36,7 +38,7 @@
                     <div class="col-12 col-md-3 pb-1">
                         <div class="card text-center">
                             <div class="d-flex justify-content-center align-items-center pt-5">
-                                <a href="" class=""> <img src="{{asset('img/service/s-card-1.png')}}" class="img-fluid" alt="banner"></a>
+                                <a href="" class=""> <img src="{{asset('img\service\srv-h-1.jpg')}}" class="img-fluid" alt="banner"></a>
                             </div>
 
                             <div class="card-body">
@@ -49,7 +51,7 @@
                     <div class="col-12 col-md-3 pb-1">
                         <div class="card text-center">
                             <div class="d-flex justify-content-center align-items-center pt-5">
-                                <a href="" class=""><img src="{{asset('img/service/s-card-2.png')}}" class="img-fluid" alt="banner"></a>
+                                <a href="" class=""><img src="{{asset('img\service\srv-h-2.jpg')}}" class="img-fluid" alt="banner"></a>
                             </div>
 
                             <div class="card-body">
@@ -62,7 +64,7 @@
                     <div class="col-12 col-md-3 pb-1">
                         <div class="card text-center">
                             <div class="d-flex justify-content-center align-items-center pt-5">
-                                <a href="" class=""><img src="{{asset('img/service/s-card-3.png')}}" class="img-fluid" alt="banner"></a>
+                                <a href="" class=""><img src="{{asset('img\service\srv-h-5.jpg')}}" class="img-fluid" alt="banner"></a>
                             </div>
 
                             <div class="card-body">
@@ -75,7 +77,7 @@
                     <div class="col-12 col-md-3 pb-1">
                         <div class="card text-center">
                             <div class="d-flex justify-content-center align-items-center pt-5"> <a href="" class=""><img
-                                        src="{{asset('img/service/s-card-4.png')}}" class="img-fluid" alt="banner"></a>
+                                        src="{{asset('img\service\srv-h-4.jpg')}}" class="img-fluid" alt="banner"></a>
                             </div>
 
                             <div class="card-body">
@@ -122,8 +124,8 @@
                                         Accordion Item #1
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>This is the first item's accordion body.</strong> It is hidden by
                                         default, until the collapse plugin adds the appropriate classes that we use to
@@ -158,13 +160,12 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         Accordion Item #3
                                     </button>
                                 </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <strong>This is the third item's accordion body.</strong> It is hidden by
                                         default, until the collapse plugin adds the appropriate classes that we use to
@@ -179,14 +180,16 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        {{-- clint info area home page  --}}
-        @include('components.clientarea')
+             {{-- bblog area  --}}
+             @include('demo-comp.clint-info')
 
-        {{-- blog area home page  --}}
-        @include('components.blogarea')
+        {{-- bblog area  --}}
+         @include('demo-comp.blog-c')
 
-</main>
+    </main>
+
 @endsection
